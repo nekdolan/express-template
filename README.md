@@ -1,3 +1,18 @@
+## Nuxt.js with Express Hot
+
+This is Nuxt.js with Express template using hot reloading for nuxt rather than the live reload of backpack.
+To make this possible in development mode a http proxy pointing to the the api server is added to nuxt as a server middleware.
+During development nuxt and the api server has to be run as separate servers.
+
+| Command | Description |
+|---------|-------------|
+| npm run nuxt | Runs nuxt in development mode on port 3000 |
+| npm run dev | Runs the express api server on port 8008 |
+
+Everything else should work the same way as nuxt-express
+
+Below is the original readme.
+
 <p align="center"><img src="https://cloud.githubusercontent.com/assets/904724/22470179/b84f58d8-e7ce-11e6-995b-0933711ca566.png"></p>
 
 
