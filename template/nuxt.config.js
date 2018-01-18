@@ -1,7 +1,17 @@
+const dev = !(process.env.NODE_ENV === 'production')
+let middlewares = []
+
+if (dev) {
+  const proxy = require('http-proxy-middleware')
+  const port = process.env.PORT || 8008
+  middlewares = [proxy('/api', {target: `http://localhost:${port}`})]
+}
+
 module.exports = {
   /*
   ** Headers of the page
   */
+  dev: dev,
   head: {
     title: 'starter',
     meta: [
@@ -17,6 +27,10 @@ module.exports = {
   ** Global CSS
   */
   css: ['~/assets/css/main.css'],
+  /*
+  ** Add proxy
+  */
+  serverMiddleware: middlewares,
   /*
   ** Add axios globally
   */

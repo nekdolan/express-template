@@ -5,28 +5,25 @@ import api from './api'
 
 const app = express()
 const host = process.env.HOST || '127.0.0.1'
-const port = process.env.PORT || 3000
-
-app.set('port', port)
+const dev = !(process.env.NODE_ENV === 'production')
+const port = process.env.PORT || (dev ? 8008 : 3000)
 
 // Import API Routes
 app.use('/api', api)
 
-// Import and Set Nuxt.js options
-let config = require('../nuxt.config.js')
-config.dev = !(process.env.NODE_ENV === 'production')
+if (!dev) {
+  // Import and Set Nuxt.js options
+  let config = require('../nuxt.config.js')
+  config.dev = dev
 
-// Init Nuxt.js
-const nuxt = new Nuxt(config)
+  // Init Nuxt.js
+  const nuxt = new Nuxt(config)
 
-// Build only in dev mode
-if (config.dev) {
-  const builder = new Builder(nuxt)
-  builder.build()
+  // Give nuxt middleware to express
+  app.use(nuxt.render)
 }
 
-// Give nuxt middleware to express
-app.use(nuxt.render)
+app.set('port', port)
 
 // Listen the server
 app.listen(port, host)
