@@ -4,6 +4,10 @@ This is Nuxt.js with Express template using hot reloading for nuxt rather than t
 To make this possible in development mode a http proxy pointing to the the api server is added to nuxt as a server middleware.
 During development nuxt and the api server has to be run as separate servers.
 
+# Nuxt.js with Express
+
+> [ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:
+
 ## Installation
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
@@ -14,6 +18,8 @@ cd <project-name> # move to your project
 npm install # or yarn install
 ```
 
+> Make sure to use a version of vue-cli >= 2.1 (vue -V).
+
 ## Commands
 
 | Command | Description |
@@ -23,47 +29,15 @@ npm install # or yarn install
 
 Everything else should work the same way as nuxt-express
 
-Below is the original readme.
-
-<p align="center"><img src="https://cloud.githubusercontent.com/assets/904724/22470179/b84f58d8-e7ce-11e6-995b-0933711ca566.png"></p>
-
-
-# Nuxt.js with Express
-
-> [ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:
-
-## Installation
-
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
-
-```bash
-vue init nuxt-community/express-template <project-name>
-cd <project-name> # move to your project
-npm install # or yarn install
-```
-
-> Make sure to use a version of vue-cli >= 2.1 (vue -V).
-
 ## ExpressJS Changes
 
 - There is a  `server` directory with the root of your `express` server.
 - The `routes` directory is called `server/api`.
 
-## Commands
-
-| Command | Description |
-|---------|-------------|
-| npm run dev | Start ExpressJS server in development with Nuxt.js in dev mode (hot reloading). Listen on [http://localhost:3000](http://localhost:3000). |
-| npm run build | Build the nuxt.js web application for production. |
-| npm start | Start ExpressJS server in production. |
-
 ## Backpack
 
 We use [backpack](https://github.com/palmerhq/backpack) to watch and build the application, so you can use the latest ES6 features (module syntax, async/await, etc.).
 
-## Live Demo
-
-[https://express.nuxtjs.org](https://express.nuxtjs.org)
 
 ## Examples
 
