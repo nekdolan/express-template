@@ -1,12 +1,10 @@
-## Nuxt.js with Express Hot
+# Nuxt.js with Express Hot
+> [ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:
+> Based on [Express-template](https://github.com/nuxt-community/express-template)
 
 This is Nuxt.js with Express template using hot reloading for nuxt rather than the live reload of backpack.
 To make this possible in development mode a http proxy pointing to the the api server is added to nuxt as a server middleware.
 During development nuxt and the api server has to be run as separate servers.
-
-# Nuxt.js with Express
-
-> [ExpressJS](http://expressjs.com/) + [Nuxt.js](https://nuxtjs.org) = :zap:
 
 ## Installation
 
