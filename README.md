@@ -4,6 +4,18 @@ This is Nuxt.js with Express template using hot reloading for nuxt rather than t
 To make this possible in development mode a http proxy pointing to the the api server is added to nuxt as a server middleware.
 During development nuxt and the api server has to be run as separate servers.
 
+## Installation
+
+This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
+
+```bash
+vue init nekdolan/express-template-hot <project-name>
+cd <project-name> # move to your project
+npm install # or yarn install
+```
+
+## Commands
+
 | Command | Description |
 |---------|-------------|
 | npm run nuxt | Runs nuxt in development mode on port 3000 |
