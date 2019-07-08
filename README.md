@@ -36,6 +36,9 @@ Everything else should work the same way as nuxt-express
 
 We use [backpack](https://github.com/palmerhq/backpack) to watch and build the application, so you can use the latest ES6 features (module syntax, async/await, etc.).
 
+## Alternative [Nuxt Express Module](https://github.com/uptownhr/nuxt-express-module)
+
+The module adds express into Nuxt's connect middleware stack using Nuxt's module system. The method will also handle hot reloading with out causing the nuxt build server to restart.
 
 ## Examples
 
